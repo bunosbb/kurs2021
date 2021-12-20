@@ -1,0 +1,130 @@
+{
+  "LevelsCount": 4,
+  "RockImage": {
+    "Path": "imgs\\rock-0",
+    "FileType": ".bmp"
+  },
+  "DemonImage": {
+    "Path": "imgs\\demon-",
+    "FileType": ".bmp",
+    "Count": 5
+  },
+  "LevelsInfo": {
+    "Path": "lvls\\lvl-",
+    "FileType": ".txt"
+  },
+  "FloorImage": {
+    "Path": "imgs\\floor-0",
+    "FileType": ".bmp"
+  },
+  "WallImage": [
+    {
+      "Path": "imgs\\wall",
+      "FileType": ".bmp",
+      "ImageCode": "0000"
+    },
+    {
+      "Path": "imgs\\wall-top",
+      "FileType": ".bmp",
+      "ImageCode": "t000"
+    },
+    {
+      "Path": "imgs\\wall-top-bot",
+      "FileType": ".bmp",
+      "ImageCode": "tb00"
+    },
+    {
+      "Path": "imgs\\wall-top-bot-left",
+      "FileType": ".bmp",
+      "ImageCode": "tbl0"
+    },
+    {
+      "Path": "imgs\\wall-top-bot-left-right",
+      "FileType": ".bmp",
+      "ImageCode": "tblr"
+    },
+    {
+      "Path": "imgs\\wall-top-bot-right",
+      "FileType": ".bmp",
+      "ImageCode": "tb0r"
+    },
+    {
+      "Path": "imgs\\wall-top-left",
+      "FileType": ".bmp",
+      "ImageCode": "t0l0"
+    },
+    {
+      "Path": "imgs\\wall-top-left-right",
+      "FileType": ".bmp",
+      "ImageCode": "t0lr"
+    },
+    {
+      "Path": "imgs\\wall-top-right",
+      "FileType": ".bmp",
+      "ImageCode": "t00r"
+    },
+    {
+      "Path": "imgs\\wall-bot",
+      "FileType": ".bmp",
+      "ImageCode": "0b00"
+    },
+    {
+      "Path": "imgs\\wall-bot-right",
+      "FileType": ".bmp",
+      "ImageCode": "0b0r"
+    },
+    {
+      "Path": "imgs\\wall-bot-left",
+      "FileType": ".bmp",
+      "ImageCode": "0bl0"
+    },
+    {
+      "Path": "imgs\\wall-bot-left-right",
+      "FileType": ".bmp",
+      "ImageCode": "0blr"
+    },
+    {
+      "Path": "imgs\\wall-left-right",
+      "FileType": ".bmp",
+      "ImageCode": "00lr"
+    },
+    {
+      "Path": "imgs\\wall-left",
+      "FileType": ".bmp",
+      "ImageCode": "00l0"
+    },
+    {
+      "Path": "imgs\\wall-right",
+      "FileType": ".bmp",
+      "ImageCode": "000r"
+    }
+  ],
+  "StartImage": {
+    "Path": "imgs\\start-0",
+    "FileType": ".bmp"
+  },
+  "EndImage": {
+    "Path": "imgs\\end-0",
+    "FileType": ".bmp"
+  },
+  "NewGameImage": {
+    "Path": "imgs\\newgame-",
+    "FileType": ".bmp",
+    "Count": 5
+  },
+  "ExitImage": {
+    "Path": "imgs\\exit-",
+    "FileType": ".bmp",
+    "Count": 5
+  },
+  "ContinueImage": {
+    "Path": "imgs\\continue-",
+    "FileType": ".bmp",
+    "Count": 5
+  },
+  "MainMenuImage": {
+    "Path": "imgs\\mainmenu-",
+    "FileType": ".bmp",
+    "Count": 5
+  }
+}

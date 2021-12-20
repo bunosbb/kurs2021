@@ -1,0 +1,10 @@
+/home/bulat/git/lol/game/lib/build/CMakeFiles/install/strip.dir
+/home/bulat/git/lol/game/lib/build/CMakeFiles/install/local.dir
+/home/bulat/git/lol/game/lib/build/CMakeFiles/install.dir
+/home/bulat/git/lol/game/lib/build/CMakeFiles/list_install_components.dir
+/home/bulat/git/lol/game/lib/build/CMakeFiles/rebuild_cache.dir
+/home/bulat/git/lol/game/lib/build/CMakeFiles/edit_cache.dir
+/home/bulat/git/lol/game/lib/build/CMakeFiles/uninstall.dir
+/home/bulat/git/lol/game/lib/build/CMakeFiles/SDL2-static.dir
+/home/bulat/git/lol/game/lib/build/CMakeFiles/SDL2.dir
+/home/bulat/git/lol/game/lib/build/CMakeFiles/SDL2main.dir

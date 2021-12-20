@@ -1,0 +1,666 @@
+Performing C SOURCE FILE Test HAVE_GCC_PREFERRED_STACK_BOUNDARY failed with the following output:
+Change Dir: /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_11f6f/fast && /usr/bin/make -f CMakeFiles/cmTC_11f6f.dir/build.make CMakeFiles/cmTC_11f6f.dir/build
+make[1]: Entering directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_11f6f.dir/src.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DHAVE_GCC_PREFERRED_STACK_BOUNDARY -mpreferred-stack-boundary=2   -o CMakeFiles/cmTC_11f6f.dir/src.c.o   -c /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp/src.c
+cc1: error: ‘-mpreferred-stack-boundary=2’ is not between 3 and 12
+make[1]: *** [CMakeFiles/cmTC_11f6f.dir/build.make:66: CMakeFiles/cmTC_11f6f.dir/src.c.o] Error 1
+make[1]: Leaving directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_11f6f/fast] Error 2
+
+
+Source file was:
+int x = 0; int main(int argc, char **argv) {}
+Performing C SOURCE FILE Test HAVE_ALTIVEC_H_HDR failed with the following output:
+Change Dir: /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_06837/fast && /usr/bin/make -f CMakeFiles/cmTC_06837.dir/build.make CMakeFiles/cmTC_06837.dir/build
+make[1]: Entering directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_06837.dir/src.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DHAVE_ALTIVEC_H_HDR -maltivec   -o CMakeFiles/cmTC_06837.dir/src.c.o   -c /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp/src.c
+cc: error: unrecognized command line option ‘-maltivec’
+make[1]: *** [CMakeFiles/cmTC_06837.dir/build.make:66: CMakeFiles/cmTC_06837.dir/src.c.o] Error 1
+make[1]: Leaving directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_06837/fast] Error 2
+
+
+Source file was:
+
+          #include <altivec.h>
+          vector unsigned int vzero() {
+              return vec_splat_u32(0);
+          }
+          int main(int argc, char **argv) { }
+Performing C SOURCE FILE Test HAVE_ALTIVEC failed with the following output:
+Change Dir: /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_951ee/fast && /usr/bin/make -f CMakeFiles/cmTC_951ee.dir/build.make CMakeFiles/cmTC_951ee.dir/build
+make[1]: Entering directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_951ee.dir/src.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DHAVE_ALTIVEC -maltivec   -o CMakeFiles/cmTC_951ee.dir/src.c.o   -c /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp/src.c
+cc: error: unrecognized command line option ‘-maltivec’
+make[1]: *** [CMakeFiles/cmTC_951ee.dir/build.make:66: CMakeFiles/cmTC_951ee.dir/src.c.o] Error 1
+make[1]: Leaving directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_951ee/fast] Error 2
+
+
+Source file was:
+
+          vector unsigned int vzero() {
+              return vec_splat_u32(0);
+          }
+          int main(int argc, char **argv) { }
+Performing C SOURCE FILE Test ARMSIMD_FOUND failed with the following output:
+Change Dir: /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_84552/fast && /usr/bin/make -f CMakeFiles/cmTC_84552.dir/build.make CMakeFiles/cmTC_84552.dir/build
+make[1]: Entering directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_84552.dir/src.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DARMSIMD_FOUND  -x assembler-with-cpp   -o CMakeFiles/cmTC_84552.dir/src.c.o   -c /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp/src.c
+/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp/src.c:8:10: error: #error EABI is required (to be sure that calling conventions are compatible)
+    8 |         #error EABI is required (to be sure that calling conventions are compatible)
+      |          ^~~~~
+make[1]: *** [CMakeFiles/cmTC_84552.dir/build.make:66: CMakeFiles/cmTC_84552.dir/src.c.o] Error 1
+make[1]: Leaving directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_84552/fast] Error 2
+
+
+Source file was:
+
+        .text
+        .arch armv6
+        .object_arch armv4
+        .arm
+        .altmacro
+        #ifndef __ARM_EABI__
+        #error EABI is required (to be sure that calling conventions are compatible)
+        #endif
+        pld [r0]
+        uqadd8 r0, r0, r0
+      
+Performing C SOURCE FILE Test ARMNEON_FOUND failed with the following output:
+Change Dir: /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_be7f8/fast && /usr/bin/make -f CMakeFiles/cmTC_be7f8.dir/build.make CMakeFiles/cmTC_be7f8.dir/build
+make[1]: Entering directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_be7f8.dir/src.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DARMNEON_FOUND  -x assembler-with-cpp   -o CMakeFiles/cmTC_be7f8.dir/src.c.o   -c /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp/src.c
+/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp/src.c:10:10: error: #error EABI is required (to be sure that calling conventions are compatible)
+   10 |         #error EABI is required (to be sure that calling conventions are compatible)
+      |          ^~~~~
+make[1]: *** [CMakeFiles/cmTC_be7f8.dir/build.make:66: CMakeFiles/cmTC_be7f8.dir/src.c.o] Error 1
+make[1]: Leaving directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_be7f8/fast] Error 2
+
+
+Source file was:
+
+        .text
+        .fpu neon
+        .arch armv7a
+        .object_arch armv4
+        .eabi_attribute 10, 0
+        .arm
+        .altmacro
+        #ifndef __ARM_EABI__
+        #error EABI is required (to be sure that calling conventions are compatible)
+        #endif
+        pld [r0]
+        vmovn.u16 d0, q0
+      
+Determining if the include file libunwind.h exists failed with the following output:
+Change Dir: /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_bf2c9/fast && /usr/bin/make -f CMakeFiles/cmTC_bf2c9.dir/build.make CMakeFiles/cmTC_bf2c9.dir/build
+make[1]: Entering directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bf2c9.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos    -o CMakeFiles/cmTC_bf2c9.dir/CheckIncludeFile.c.o   -c /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: libunwind.h: No such file or directory
+    1 | #include <libunwind.h>
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_bf2c9.dir/build.make:66: CMakeFiles/cmTC_bf2c9.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_bf2c9/fast] Error 2
+
+
+
+Determining if the function strlcpy exists failed with the following output:
+Change Dir: /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_83370/fast && /usr/bin/make -f CMakeFiles/cmTC_83370.dir/build.make CMakeFiles/cmTC_83370.dir/build
+make[1]: Entering directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_83370.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=strlcpy   -o CMakeFiles/cmTC_83370.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_83370
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_83370.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=strlcpy    -rdynamic CMakeFiles/cmTC_83370.dir/CheckFunctionExists.c.o  -o cmTC_83370 
+/usr/bin/ld: CMakeFiles/cmTC_83370.dir/CheckFunctionExists.c.o: in function `main':
+/usr/share/cmake-3.16/Modules/CheckFunctionExists.c:17: undefined reference to `strlcpy'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_83370.dir/build.make:87: cmTC_83370] Error 1
+make[1]: Leaving directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_83370/fast] Error 2
+
+
+
+Determining if the function strlcat exists failed with the following output:
+Change Dir: /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_46bba/fast && /usr/bin/make -f CMakeFiles/cmTC_46bba.dir/build.make CMakeFiles/cmTC_46bba.dir/build
+make[1]: Entering directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_46bba.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=strlcat   -o CMakeFiles/cmTC_46bba.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_46bba
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_46bba.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=strlcat    -rdynamic CMakeFiles/cmTC_46bba.dir/CheckFunctionExists.c.o  -o cmTC_46bba 
+/usr/bin/ld: CMakeFiles/cmTC_46bba.dir/CheckFunctionExists.c.o: in function `main':
+/usr/share/cmake-3.16/Modules/CheckFunctionExists.c:17: undefined reference to `strlcat'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_46bba.dir/build.make:87: cmTC_46bba] Error 1
+make[1]: Leaving directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_46bba/fast] Error 2
+
+
+
+Determining if the function _strrev exists failed with the following output:
+Change Dir: /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_8f845/fast && /usr/bin/make -f CMakeFiles/cmTC_8f845.dir/build.make CMakeFiles/cmTC_8f845.dir/build
+make[1]: Entering directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8f845.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=_strrev   -o CMakeFiles/cmTC_8f845.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_8f845
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8f845.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=_strrev    -rdynamic CMakeFiles/cmTC_8f845.dir/CheckFunctionExists.c.o  -o cmTC_8f845 
+/usr/bin/ld: CMakeFiles/cmTC_8f845.dir/CheckFunctionExists.c.o: in function `main':
+/usr/share/cmake-3.16/Modules/CheckFunctionExists.c:17: undefined reference to `_strrev'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_8f845.dir/build.make:87: cmTC_8f845] Error 1
+make[1]: Leaving directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_8f845/fast] Error 2
+
+
+
+Determining if the function _strupr exists failed with the following output:
+Change Dir: /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_94a4a/fast && /usr/bin/make -f CMakeFiles/cmTC_94a4a.dir/build.make CMakeFiles/cmTC_94a4a.dir/build
+make[1]: Entering directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_94a4a.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=_strupr   -o CMakeFiles/cmTC_94a4a.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_94a4a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_94a4a.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=_strupr    -rdynamic CMakeFiles/cmTC_94a4a.dir/CheckFunctionExists.c.o  -o cmTC_94a4a 
+/usr/bin/ld: CMakeFiles/cmTC_94a4a.dir/CheckFunctionExists.c.o: in function `main':
+/usr/share/cmake-3.16/Modules/CheckFunctionExists.c:17: undefined reference to `_strupr'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_94a4a.dir/build.make:87: cmTC_94a4a] Error 1
+make[1]: Leaving directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_94a4a/fast] Error 2
+
+
+
+Determining if the function _strlwr exists failed with the following output:
+Change Dir: /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b3eaa/fast && /usr/bin/make -f CMakeFiles/cmTC_b3eaa.dir/build.make CMakeFiles/cmTC_b3eaa.dir/build
+make[1]: Entering directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b3eaa.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=_strlwr   -o CMakeFiles/cmTC_b3eaa.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_b3eaa
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b3eaa.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=_strlwr    -rdynamic CMakeFiles/cmTC_b3eaa.dir/CheckFunctionExists.c.o  -o cmTC_b3eaa 
+/usr/bin/ld: CMakeFiles/cmTC_b3eaa.dir/CheckFunctionExists.c.o: in function `main':
+/usr/share/cmake-3.16/Modules/CheckFunctionExists.c:17: undefined reference to `_strlwr'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_b3eaa.dir/build.make:87: cmTC_b3eaa] Error 1
+make[1]: Leaving directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_b3eaa/fast] Error 2
+
+
+
+Determining if the function itoa exists failed with the following output:
+Change Dir: /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_757be/fast && /usr/bin/make -f CMakeFiles/cmTC_757be.dir/build.make CMakeFiles/cmTC_757be.dir/build
+make[1]: Entering directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_757be.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=itoa   -o CMakeFiles/cmTC_757be.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_757be
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_757be.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=itoa    -rdynamic CMakeFiles/cmTC_757be.dir/CheckFunctionExists.c.o  -o cmTC_757be 
+/usr/bin/ld: CMakeFiles/cmTC_757be.dir/CheckFunctionExists.c.o: in function `main':
+/usr/share/cmake-3.16/Modules/CheckFunctionExists.c:17: undefined reference to `itoa'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_757be.dir/build.make:87: cmTC_757be] Error 1
+make[1]: Leaving directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_757be/fast] Error 2
+
+
+
+Determining if the function _ltoa exists failed with the following output:
+Change Dir: /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_cfb30/fast && /usr/bin/make -f CMakeFiles/cmTC_cfb30.dir/build.make CMakeFiles/cmTC_cfb30.dir/build
+make[1]: Entering directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cfb30.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=_ltoa   -o CMakeFiles/cmTC_cfb30.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_cfb30
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cfb30.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=_ltoa    -rdynamic CMakeFiles/cmTC_cfb30.dir/CheckFunctionExists.c.o  -o cmTC_cfb30 
+/usr/bin/ld: CMakeFiles/cmTC_cfb30.dir/CheckFunctionExists.c.o: in function `main':
+/usr/share/cmake-3.16/Modules/CheckFunctionExists.c:17: undefined reference to `_ltoa'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_cfb30.dir/build.make:87: cmTC_cfb30] Error 1
+make[1]: Leaving directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_cfb30/fast] Error 2
+
+
+
+Determining if the function _uitoa exists failed with the following output:
+Change Dir: /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_2d407/fast && /usr/bin/make -f CMakeFiles/cmTC_2d407.dir/build.make CMakeFiles/cmTC_2d407.dir/build
+make[1]: Entering directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2d407.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=_uitoa   -o CMakeFiles/cmTC_2d407.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_2d407
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2d407.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=_uitoa    -rdynamic CMakeFiles/cmTC_2d407.dir/CheckFunctionExists.c.o  -o cmTC_2d407 
+/usr/bin/ld: CMakeFiles/cmTC_2d407.dir/CheckFunctionExists.c.o: in function `main':
+/usr/share/cmake-3.16/Modules/CheckFunctionExists.c:17: undefined reference to `_uitoa'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_2d407.dir/build.make:87: cmTC_2d407] Error 1
+make[1]: Leaving directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_2d407/fast] Error 2
+
+
+
+Determining if the function _ultoa exists failed with the following output:
+Change Dir: /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_2bd30/fast && /usr/bin/make -f CMakeFiles/cmTC_2bd30.dir/build.make CMakeFiles/cmTC_2bd30.dir/build
+make[1]: Entering directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2bd30.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=_ultoa   -o CMakeFiles/cmTC_2bd30.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_2bd30
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2bd30.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=_ultoa    -rdynamic CMakeFiles/cmTC_2bd30.dir/CheckFunctionExists.c.o  -o cmTC_2bd30 
+/usr/bin/ld: CMakeFiles/cmTC_2bd30.dir/CheckFunctionExists.c.o: in function `main':
+/usr/share/cmake-3.16/Modules/CheckFunctionExists.c:17: undefined reference to `_ultoa'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_2bd30.dir/build.make:87: cmTC_2bd30] Error 1
+make[1]: Leaving directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_2bd30/fast] Error 2
+
+
+
+Determining if the function _i64toa exists failed with the following output:
+Change Dir: /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_3c5e0/fast && /usr/bin/make -f CMakeFiles/cmTC_3c5e0.dir/build.make CMakeFiles/cmTC_3c5e0.dir/build
+make[1]: Entering directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3c5e0.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=_i64toa   -o CMakeFiles/cmTC_3c5e0.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_3c5e0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3c5e0.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=_i64toa    -rdynamic CMakeFiles/cmTC_3c5e0.dir/CheckFunctionExists.c.o  -o cmTC_3c5e0 
+/usr/bin/ld: CMakeFiles/cmTC_3c5e0.dir/CheckFunctionExists.c.o: in function `main':
+/usr/share/cmake-3.16/Modules/CheckFunctionExists.c:17: undefined reference to `_i64toa'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_3c5e0.dir/build.make:87: cmTC_3c5e0] Error 1
+make[1]: Leaving directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_3c5e0/fast] Error 2
+
+
+
+Determining if the function _ui64toa exists failed with the following output:
+Change Dir: /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ad762/fast && /usr/bin/make -f CMakeFiles/cmTC_ad762.dir/build.make CMakeFiles/cmTC_ad762.dir/build
+make[1]: Entering directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ad762.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=_ui64toa   -o CMakeFiles/cmTC_ad762.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_ad762
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ad762.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=_ui64toa    -rdynamic CMakeFiles/cmTC_ad762.dir/CheckFunctionExists.c.o  -o cmTC_ad762 
+/usr/bin/ld: CMakeFiles/cmTC_ad762.dir/CheckFunctionExists.c.o: in function `main':
+/usr/share/cmake-3.16/Modules/CheckFunctionExists.c:17: undefined reference to `_ui64toa'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_ad762.dir/build.make:87: cmTC_ad762] Error 1
+make[1]: Leaving directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_ad762/fast] Error 2
+
+
+
+Determining if the function _stricmp exists failed with the following output:
+Change Dir: /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_62c68/fast && /usr/bin/make -f CMakeFiles/cmTC_62c68.dir/build.make CMakeFiles/cmTC_62c68.dir/build
+make[1]: Entering directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_62c68.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=_stricmp   -o CMakeFiles/cmTC_62c68.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_62c68
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_62c68.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=_stricmp    -rdynamic CMakeFiles/cmTC_62c68.dir/CheckFunctionExists.c.o  -o cmTC_62c68 
+/usr/bin/ld: CMakeFiles/cmTC_62c68.dir/CheckFunctionExists.c.o: in function `main':
+/usr/share/cmake-3.16/Modules/CheckFunctionExists.c:17: undefined reference to `_stricmp'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_62c68.dir/build.make:87: cmTC_62c68] Error 1
+make[1]: Leaving directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_62c68/fast] Error 2
+
+
+
+Determining if the function _strnicmp exists failed with the following output:
+Change Dir: /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_2b7f5/fast && /usr/bin/make -f CMakeFiles/cmTC_2b7f5.dir/build.make CMakeFiles/cmTC_2b7f5.dir/build
+make[1]: Entering directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2b7f5.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=_strnicmp   -o CMakeFiles/cmTC_2b7f5.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_2b7f5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2b7f5.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=_strnicmp    -rdynamic CMakeFiles/cmTC_2b7f5.dir/CheckFunctionExists.c.o  -o cmTC_2b7f5 
+/usr/bin/ld: CMakeFiles/cmTC_2b7f5.dir/CheckFunctionExists.c.o: in function `main':
+/usr/share/cmake-3.16/Modules/CheckFunctionExists.c:17: undefined reference to `_strnicmp'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_2b7f5.dir/build.make:87: cmTC_2b7f5] Error 1
+make[1]: Leaving directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_2b7f5/fast] Error 2
+
+
+
+Determining if the function wcslcat exists failed with the following output:
+Change Dir: /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_20a32/fast && /usr/bin/make -f CMakeFiles/cmTC_20a32.dir/build.make CMakeFiles/cmTC_20a32.dir/build
+make[1]: Entering directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_20a32.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=wcslcat   -o CMakeFiles/cmTC_20a32.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_20a32
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_20a32.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=wcslcat    -rdynamic CMakeFiles/cmTC_20a32.dir/CheckFunctionExists.c.o  -o cmTC_20a32 
+/usr/bin/ld: CMakeFiles/cmTC_20a32.dir/CheckFunctionExists.c.o: in function `main':
+/usr/share/cmake-3.16/Modules/CheckFunctionExists.c:17: undefined reference to `wcslcat'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_20a32.dir/build.make:87: cmTC_20a32] Error 1
+make[1]: Leaving directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_20a32/fast] Error 2
+
+
+
+Determining if the function wcslcpy exists failed with the following output:
+Change Dir: /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ad57b/fast && /usr/bin/make -f CMakeFiles/cmTC_ad57b.dir/build.make CMakeFiles/cmTC_ad57b.dir/build
+make[1]: Entering directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ad57b.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=wcslcpy   -o CMakeFiles/cmTC_ad57b.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_ad57b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ad57b.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=wcslcpy    -rdynamic CMakeFiles/cmTC_ad57b.dir/CheckFunctionExists.c.o  -o cmTC_ad57b 
+/usr/bin/ld: CMakeFiles/cmTC_ad57b.dir/CheckFunctionExists.c.o: in function `main':
+/usr/share/cmake-3.16/Modules/CheckFunctionExists.c:17: undefined reference to `wcslcpy'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_ad57b.dir/build.make:87: cmTC_ad57b] Error 1
+make[1]: Leaving directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_ad57b/fast] Error 2
+
+
+
+Determining if the function sysctlbyname exists failed with the following output:
+Change Dir: /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_11165/fast && /usr/bin/make -f CMakeFiles/cmTC_11165.dir/build.make CMakeFiles/cmTC_11165.dir/build
+make[1]: Entering directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_11165.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=sysctlbyname   -o CMakeFiles/cmTC_11165.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_11165
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_11165.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=sysctlbyname    -rdynamic CMakeFiles/cmTC_11165.dir/CheckFunctionExists.c.o  -o cmTC_11165 
+/usr/bin/ld: CMakeFiles/cmTC_11165.dir/CheckFunctionExists.c.o: in function `main':
+/usr/share/cmake-3.16/Modules/CheckFunctionExists.c:17: undefined reference to `sysctlbyname'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_11165.dir/build.make:87: cmTC_11165] Error 1
+make[1]: Leaving directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_11165/fast] Error 2
+
+
+
+Determining if the function iconv_open exists in the iconv failed with the following output:
+Change Dir: /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_63310/fast && /usr/bin/make -f CMakeFiles/cmTC_63310.dir/build.make CMakeFiles/cmTC_63310.dir/build
+make[1]: Entering directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_63310.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=iconv_open   -o CMakeFiles/cmTC_63310.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_63310
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_63310.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=iconv_open    -rdynamic CMakeFiles/cmTC_63310.dir/CheckFunctionExists.c.o  -o cmTC_63310  -liconv 
+/usr/bin/ld: cannot find -liconv
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_63310.dir/build.make:87: cmTC_63310] Error 1
+make[1]: Leaving directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_63310/fast] Error 2
+
+
+
+Determining if the function alloca exists failed with the following output:
+Change Dir: /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_cdfe1/fast && /usr/bin/make -f CMakeFiles/cmTC_cdfe1.dir/build.make CMakeFiles/cmTC_cdfe1.dir/build
+make[1]: Entering directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cdfe1.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=alloca   -o CMakeFiles/cmTC_cdfe1.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+<command-line>: warning: conflicting types for built-in function ‘alloca’; expected ‘void *(long unsigned int)’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.16/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+    7 |   CHECK_FUNCTION_EXISTS(void);
+      |   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_cdfe1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cdfe1.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=alloca    -rdynamic CMakeFiles/cmTC_cdfe1.dir/CheckFunctionExists.c.o  -o cmTC_cdfe1 
+/usr/bin/ld: CMakeFiles/cmTC_cdfe1.dir/CheckFunctionExists.c.o: in function `main':
+/usr/share/cmake-3.16/Modules/CheckFunctionExists.c:17: undefined reference to `alloca'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_cdfe1.dir/build.make:87: cmTC_cdfe1] Error 1
+make[1]: Leaving directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_cdfe1/fast] Error 2
+
+
+
+Determining if the function dlopen exists failed with the following output:
+Change Dir: /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_4ba8f/fast && /usr/bin/make -f CMakeFiles/cmTC_4ba8f.dir/build.make CMakeFiles/cmTC_4ba8f.dir/build
+make[1]: Entering directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4ba8f.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=dlopen   -o CMakeFiles/cmTC_4ba8f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_4ba8f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4ba8f.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=dlopen    -rdynamic CMakeFiles/cmTC_4ba8f.dir/CheckFunctionExists.c.o  -o cmTC_4ba8f 
+/usr/bin/ld: CMakeFiles/cmTC_4ba8f.dir/CheckFunctionExists.c.o: in function `main':
+/usr/share/cmake-3.16/Modules/CheckFunctionExists.c:17: undefined reference to `dlopen'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_4ba8f.dir/build.make:87: cmTC_4ba8f] Error 1
+make[1]: Leaving directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_4ba8f/fast] Error 2
+
+
+
+Determining if the include file audio/audiolib.h exists failed with the following output:
+Change Dir: /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_30f62/fast && /usr/bin/make -f CMakeFiles/cmTC_30f62.dir/build.make CMakeFiles/cmTC_30f62.dir/build
+make[1]: Entering directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_30f62.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos    -o CMakeFiles/cmTC_30f62.dir/CheckIncludeFile.c.o   -c /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: audio/audiolib.h: No such file or directory
+    1 | #include <audio/audiolib.h>
+      |          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_30f62.dir/build.make:66: CMakeFiles/cmTC_30f62.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_30f62/fast] Error 2
+
+
+
+Determining if the include file samplerate.h exists failed with the following output:
+Change Dir: /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_dc48a/fast && /usr/bin/make -f CMakeFiles/cmTC_dc48a.dir/build.make CMakeFiles/cmTC_dc48a.dir/build
+make[1]: Entering directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_dc48a.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos    -o CMakeFiles/cmTC_dc48a.dir/CheckIncludeFile.c.o   -c /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: samplerate.h: No such file or directory
+    1 | #include <samplerate.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_dc48a.dir/build.make:66: CMakeFiles/cmTC_dc48a.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_dc48a/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test HAVE_VIDEO_RPI failed with the following output:
+Change Dir: /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_c9587/fast && /usr/bin/make -f CMakeFiles/cmTC_c9587.dir/build.make CMakeFiles/cmTC_c9587.dir/build
+make[1]: Entering directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c9587.dir/src.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DHAVE_VIDEO_RPI  -I/opt/vc/include/interface/vmcs_host/linux/ -I/opt/vc/include/interface/vcos/pthreads -I/opt/vc/include  -L/opt/vc/lib   -o CMakeFiles/cmTC_c9587.dir/src.c.o   -c /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp/src.c
+/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp/src.c:2:18: fatal error: bcm_host.h: No such file or directory
+    2 |         #include <bcm_host.h>
+      |                  ^~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_c9587.dir/build.make:66: CMakeFiles/cmTC_c9587.dir/src.c.o] Error 1
+make[1]: Leaving directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_c9587/fast] Error 2
+
+
+Source file was:
+
+        #include <bcm_host.h>
+        int main(int argc, char **argv) {}
+Performing C SOURCE FILE Test HAVE_VIDEO_VIVANTE_VDK failed with the following output:
+Change Dir: /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e72de/fast && /usr/bin/make -f CMakeFiles/cmTC_e72de.dir/build.make CMakeFiles/cmTC_e72de.dir/build
+make[1]: Entering directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e72de.dir/src.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DHAVE_VIDEO_VIVANTE_VDK   -o CMakeFiles/cmTC_e72de.dir/src.c.o   -c /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp/src.c
+/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp/src.c:2:18: fatal error: gc_vdk.h: No such file or directory
+    2 |         #include <gc_vdk.h>
+      |                  ^~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_e72de.dir/build.make:66: CMakeFiles/cmTC_e72de.dir/src.c.o] Error 1
+make[1]: Leaving directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_e72de/fast] Error 2
+
+
+Source file was:
+
+        #include <gc_vdk.h>
+        int main(int argc, char** argv) {}
+Performing C SOURCE FILE Test HAVE_VIDEO_VIVANTE_EGL_FB failed with the following output:
+Change Dir: /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_f2979/fast && /usr/bin/make -f CMakeFiles/cmTC_f2979.dir/build.make CMakeFiles/cmTC_f2979.dir/build
+make[1]: Entering directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f2979.dir/src.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DHAVE_VIDEO_VIVANTE_EGL_FB   -o CMakeFiles/cmTC_f2979.dir/src.c.o   -c /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp/src.c
+/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp/src.c:4:18: fatal error: EGL/eglvivante.h: No such file or directory
+    4 |         #include <EGL/eglvivante.h>
+      |                  ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_f2979.dir/build.make:66: CMakeFiles/cmTC_f2979.dir/src.c.o] Error 1
+make[1]: Leaving directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_f2979/fast] Error 2
+
+
+Source file was:
+
+        #define LINUX
+        #define EGL_API_FB
+        #include <EGL/eglvivante.h>
+        int main(int argc, char** argv) {}
+Determining if the include file fcitx/frontend.h exists failed with the following output:
+Change Dir: /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_4aca4/fast && /usr/bin/make -f CMakeFiles/cmTC_4aca4.dir/build.make CMakeFiles/cmTC_4aca4.dir/build
+make[1]: Entering directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4aca4.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos     -o CMakeFiles/cmTC_4aca4.dir/CheckIncludeFile.c.o   -c /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: fcitx/frontend.h: No such file or directory
+    1 | #include <fcitx/frontend.h>
+      |          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_4aca4.dir/build.make:66: CMakeFiles/cmTC_4aca4.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_4aca4/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test HAVE_INPUT_TSLIB failed with the following output:
+Change Dir: /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_bde6f/fast && /usr/bin/make -f CMakeFiles/cmTC_bde6f.dir/build.make CMakeFiles/cmTC_bde6f.dir/build
+make[1]: Entering directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bde6f.dir/src.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DHAVE_INPUT_TSLIB   -o CMakeFiles/cmTC_bde6f.dir/src.c.o   -c /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp/src.c
+/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp/src.c:2:18: fatal error: tslib.h: No such file or directory
+    2 |         #include "tslib.h"
+      |                  ^~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_bde6f.dir/build.make:66: CMakeFiles/cmTC_bde6f.dir/src.c.o] Error 1
+make[1]: Leaving directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_bde6f/fast] Error 2
+
+
+Source file was:
+
+        #include "tslib.h"
+        int main(int argc, char** argv) { }
+Performing C SOURCE FILE Test HAVE_PTHREAD_NP_H failed with the following output:
+Change Dir: /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b76ae/fast && /usr/bin/make -f CMakeFiles/cmTC_b76ae.dir/build.make CMakeFiles/cmTC_b76ae.dir/build
+make[1]: Entering directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b76ae.dir/src.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DHAVE_PTHREAD_NP_H   -D_REENTRANT -pthread   -o CMakeFiles/cmTC_b76ae.dir/src.c.o   -c /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp/src.c
+/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp/src.c:3:20: fatal error: pthread_np.h: No such file or directory
+    3 |           #include <pthread_np.h>
+      |                    ^~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_b76ae.dir/build.make:66: CMakeFiles/cmTC_b76ae.dir/src.c.o] Error 1
+make[1]: Leaving directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_b76ae/fast] Error 2
+
+
+Source file was:
+
+          #include <pthread.h>
+          #include <pthread_np.h>
+          int main(int argc, char** argv) { return 0; }
+Determining if the function pthread_set_name_np exists failed with the following output:
+Change Dir: /home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ac350/fast && /usr/bin/make -f CMakeFiles/cmTC_ac350.dir/build.make CMakeFiles/cmTC_ac350.dir/build
+make[1]: Entering directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ac350.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=pthread_set_name_np   -D_REENTRANT -pthread   -o CMakeFiles/cmTC_ac350.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_ac350
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ac350.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/bulat/git/lol/game/lib/SDL2-2.0.12/src/video/khronos -DCHECK_FUNCTION_EXISTS=pthread_set_name_np   -D_REENTRANT -pthread    -rdynamic CMakeFiles/cmTC_ac350.dir/CheckFunctionExists.c.o  -o cmTC_ac350 
+/usr/bin/ld: CMakeFiles/cmTC_ac350.dir/CheckFunctionExists.c.o: in function `main':
+/usr/share/cmake-3.16/Modules/CheckFunctionExists.c:17: undefined reference to `pthread_set_name_np'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_ac350.dir/build.make:87: cmTC_ac350] Error 1
+make[1]: Leaving directory '/home/bulat/git/lol/game/lib/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_ac350/fast] Error 2
+
+
+
