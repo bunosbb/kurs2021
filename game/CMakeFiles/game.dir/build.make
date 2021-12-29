@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bulat/git/lol/game
+CMAKE_SOURCE_DIR = /home/bulat/kurs/kurs2021/game
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bulat/git/lol/game
+CMAKE_BINARY_DIR = /home/bulat/kurs/kurs2021/game
 
 # Include any dependencies generated for this target.
 include CMakeFiles/game.dir/depend.make
@@ -59,94 +59,94 @@ include CMakeFiles/game.dir/flags.make
 
 CMakeFiles/game.dir/main.cpp.o: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/main.cpp.o: main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bulat/git/lol/game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/game.dir/main.cpp.o"
-	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/main.cpp.o -c /home/bulat/git/lol/game/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bulat/kurs/kurs2021/game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/game.dir/main.cpp.o"
+	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/main.cpp.o -c /home/bulat/kurs/kurs2021/game/main.cpp
 
 CMakeFiles/game.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/main.cpp.i"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bulat/git/lol/game/main.cpp > CMakeFiles/game.dir/main.cpp.i
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bulat/kurs/kurs2021/game/main.cpp > CMakeFiles/game.dir/main.cpp.i
 
 CMakeFiles/game.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/main.cpp.s"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bulat/git/lol/game/main.cpp -o CMakeFiles/game.dir/main.cpp.s
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bulat/kurs/kurs2021/game/main.cpp -o CMakeFiles/game.dir/main.cpp.s
 
 CMakeFiles/game.dir/src/util.cpp.o: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/src/util.cpp.o: src/util.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bulat/git/lol/game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/game.dir/src/util.cpp.o"
-	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/util.cpp.o -c /home/bulat/git/lol/game/src/util.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bulat/kurs/kurs2021/game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/game.dir/src/util.cpp.o"
+	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/util.cpp.o -c /home/bulat/kurs/kurs2021/game/src/util.cpp
 
 CMakeFiles/game.dir/src/util.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/src/util.cpp.i"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bulat/git/lol/game/src/util.cpp > CMakeFiles/game.dir/src/util.cpp.i
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bulat/kurs/kurs2021/game/src/util.cpp > CMakeFiles/game.dir/src/util.cpp.i
 
 CMakeFiles/game.dir/src/util.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/src/util.cpp.s"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bulat/git/lol/game/src/util.cpp -o CMakeFiles/game.dir/src/util.cpp.s
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bulat/kurs/kurs2021/game/src/util.cpp -o CMakeFiles/game.dir/src/util.cpp.s
 
 CMakeFiles/game.dir/src/Game.cpp.o: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/src/Game.cpp.o: src/Game.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bulat/git/lol/game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/game.dir/src/Game.cpp.o"
-	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/Game.cpp.o -c /home/bulat/git/lol/game/src/Game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bulat/kurs/kurs2021/game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/game.dir/src/Game.cpp.o"
+	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/Game.cpp.o -c /home/bulat/kurs/kurs2021/game/src/Game.cpp
 
 CMakeFiles/game.dir/src/Game.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/src/Game.cpp.i"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bulat/git/lol/game/src/Game.cpp > CMakeFiles/game.dir/src/Game.cpp.i
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bulat/kurs/kurs2021/game/src/Game.cpp > CMakeFiles/game.dir/src/Game.cpp.i
 
 CMakeFiles/game.dir/src/Game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/src/Game.cpp.s"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bulat/git/lol/game/src/Game.cpp -o CMakeFiles/game.dir/src/Game.cpp.s
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bulat/kurs/kurs2021/game/src/Game.cpp -o CMakeFiles/game.dir/src/Game.cpp.s
 
 CMakeFiles/game.dir/src/Graphics.cpp.o: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/src/Graphics.cpp.o: src/Graphics.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bulat/git/lol/game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/game.dir/src/Graphics.cpp.o"
-	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/Graphics.cpp.o -c /home/bulat/git/lol/game/src/Graphics.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bulat/kurs/kurs2021/game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/game.dir/src/Graphics.cpp.o"
+	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/Graphics.cpp.o -c /home/bulat/kurs/kurs2021/game/src/Graphics.cpp
 
 CMakeFiles/game.dir/src/Graphics.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/src/Graphics.cpp.i"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bulat/git/lol/game/src/Graphics.cpp > CMakeFiles/game.dir/src/Graphics.cpp.i
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bulat/kurs/kurs2021/game/src/Graphics.cpp > CMakeFiles/game.dir/src/Graphics.cpp.i
 
 CMakeFiles/game.dir/src/Graphics.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/src/Graphics.cpp.s"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bulat/git/lol/game/src/Graphics.cpp -o CMakeFiles/game.dir/src/Graphics.cpp.s
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bulat/kurs/kurs2021/game/src/Graphics.cpp -o CMakeFiles/game.dir/src/Graphics.cpp.s
 
 CMakeFiles/game.dir/src/Image.cpp.o: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/src/Image.cpp.o: src/Image.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bulat/git/lol/game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/game.dir/src/Image.cpp.o"
-	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/Image.cpp.o -c /home/bulat/git/lol/game/src/Image.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bulat/kurs/kurs2021/game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/game.dir/src/Image.cpp.o"
+	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/Image.cpp.o -c /home/bulat/kurs/kurs2021/game/src/Image.cpp
 
 CMakeFiles/game.dir/src/Image.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/src/Image.cpp.i"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bulat/git/lol/game/src/Image.cpp > CMakeFiles/game.dir/src/Image.cpp.i
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bulat/kurs/kurs2021/game/src/Image.cpp > CMakeFiles/game.dir/src/Image.cpp.i
 
 CMakeFiles/game.dir/src/Image.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/src/Image.cpp.s"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bulat/git/lol/game/src/Image.cpp -o CMakeFiles/game.dir/src/Image.cpp.s
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bulat/kurs/kurs2021/game/src/Image.cpp -o CMakeFiles/game.dir/src/Image.cpp.s
 
 CMakeFiles/game.dir/src/Input.cpp.o: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/src/Input.cpp.o: src/Input.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bulat/git/lol/game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/game.dir/src/Input.cpp.o"
-	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/Input.cpp.o -c /home/bulat/git/lol/game/src/Input.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bulat/kurs/kurs2021/game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/game.dir/src/Input.cpp.o"
+	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/Input.cpp.o -c /home/bulat/kurs/kurs2021/game/src/Input.cpp
 
 CMakeFiles/game.dir/src/Input.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/src/Input.cpp.i"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bulat/git/lol/game/src/Input.cpp > CMakeFiles/game.dir/src/Input.cpp.i
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bulat/kurs/kurs2021/game/src/Input.cpp > CMakeFiles/game.dir/src/Input.cpp.i
 
 CMakeFiles/game.dir/src/Input.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/src/Input.cpp.s"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bulat/git/lol/game/src/Input.cpp -o CMakeFiles/game.dir/src/Input.cpp.s
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bulat/kurs/kurs2021/game/src/Input.cpp -o CMakeFiles/game.dir/src/Input.cpp.s
 
 CMakeFiles/game.dir/src/Parser.cpp.o: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/src/Parser.cpp.o: src/Parser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bulat/git/lol/game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/game.dir/src/Parser.cpp.o"
-	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/Parser.cpp.o -c /home/bulat/git/lol/game/src/Parser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bulat/kurs/kurs2021/game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/game.dir/src/Parser.cpp.o"
+	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/Parser.cpp.o -c /home/bulat/kurs/kurs2021/game/src/Parser.cpp
 
 CMakeFiles/game.dir/src/Parser.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/src/Parser.cpp.i"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bulat/git/lol/game/src/Parser.cpp > CMakeFiles/game.dir/src/Parser.cpp.i
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bulat/kurs/kurs2021/game/src/Parser.cpp > CMakeFiles/game.dir/src/Parser.cpp.i
 
 CMakeFiles/game.dir/src/Parser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/src/Parser.cpp.s"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bulat/git/lol/game/src/Parser.cpp -o CMakeFiles/game.dir/src/Parser.cpp.s
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bulat/kurs/kurs2021/game/src/Parser.cpp -o CMakeFiles/game.dir/src/Parser.cpp.s
 
 # Object files for target game
 game_OBJECTS = \
@@ -170,7 +170,7 @@ game: CMakeFiles/game.dir/src/Input.cpp.o
 game: CMakeFiles/game.dir/src/Parser.cpp.o
 game: CMakeFiles/game.dir/build.make
 game: CMakeFiles/game.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bulat/git/lol/game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable game"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bulat/kurs/kurs2021/game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable game"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/game.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -183,6 +183,6 @@ CMakeFiles/game.dir/clean:
 .PHONY : CMakeFiles/game.dir/clean
 
 CMakeFiles/game.dir/depend:
-	cd /home/bulat/git/lol/game && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bulat/git/lol/game /home/bulat/git/lol/game /home/bulat/git/lol/game /home/bulat/git/lol/game /home/bulat/git/lol/game/CMakeFiles/game.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/bulat/kurs/kurs2021/game && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bulat/kurs/kurs2021/game /home/bulat/kurs/kurs2021/game /home/bulat/kurs/kurs2021/game /home/bulat/kurs/kurs2021/game /home/bulat/kurs/kurs2021/game/CMakeFiles/game.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/game.dir/depend
 

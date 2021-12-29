@@ -5,6 +5,7 @@ Graphics::Graphics(int new_w, int new_h) {
     h = new_h;
     SDL_Init(SDL_INIT_EVERYTHING);
     wind = SDL_CreateWindow("lab", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, w, h, SDL_WINDOW_SHOWN);
+    //wind = SDL_CreateWindow("lab", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, w, h, SDL_WINDOW_FULLSCREEN);
 }
 
 Image* Graphics::NewImage(const char* file) {
@@ -66,6 +67,21 @@ Unit::Unit() {
 Unit::Unit(int new_x, int new_y) {
     x = new_x;
     y = new_y;
+}
+
+Unit::~Unit() {
+    std::cout << "delete unit" << std::endl;
+    for (auto image : imgs) {
+        delete image;
+    }
+
+        std::cout <<"delete map img" << std::endl;
+    for (auto [_, vector] : str_imgs) {
+        for (auto image : vector) {
+            delete image;
+        }
+    }
+        std::cout <<"deleted map img" << std::endl;
 }
 
 void Unit::AddImage(Image* img) {

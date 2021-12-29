@@ -6,5 +6,5 @@ CXX_FLAGS =  -std=c++2a
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/bulat/git/lol/game/src -I/usr/include/SDL2 
+CXX_INCLUDES = -I/home/bulat/kurs/kurs2021/game/src -I/usr/include/SDL2 
 

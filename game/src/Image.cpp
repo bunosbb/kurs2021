@@ -1,5 +1,9 @@
 #include "Image.h"
 
+Image::~Image() {
+    delete surf;
+}
+
 int Image::GetH() {
     return surf->h;
 }
