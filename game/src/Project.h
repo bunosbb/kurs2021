@@ -20,12 +20,12 @@
 
 #include <string.h>
 
-#include "util.h"
 #include "Game.h"
 #include "Graphics.h"
 #include "Image.h"
 #include "Input.h"
 //#include "Audio.h"
 #include "Parser.h"
+#include "GameObject.hpp"
 
 #endif

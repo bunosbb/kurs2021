@@ -1,92 +1,42 @@
 {
-  "LevelsCount": 4,
+  "Delay": 7,
+  "FallAbs": [0, 0],
+  "LevelsCount": 1,
   "DemonImage": {
     "Path": "../imgs/demon-",
     "FileType": ".bmp",
     "Count": 5
   },
-  "WallImage": [
-    {
-      "Path": "../imgs/wall",
-      "FileType": ".bmp",
-      "ImageCode": "0000"
-    },
-    {
-      "Path": "../imgs/wall-top",
-      "FileType": ".bmp",
-      "ImageCode": "t000"
-    },
-    {
-      "Path": "../imgs/wall-top-bot",
-      "FileType": ".bmp",
-      "ImageCode": "tb00"
-    },
-    {
-      "Path": "../imgs/wall-top-bot-left",
-      "FileType": ".bmp",
-      "ImageCode": "tbl0"
-    },
-    {
-      "Path": "../imgs/wall-top-bot-left-right",
-      "FileType": ".bmp",
-      "ImageCode": "tblr"
-    },
-    {
-      "Path": "../imgs/wall-top-bot-right",
-      "FileType": ".bmp",
-      "ImageCode": "tb0r"
-    },
-    {
-      "Path": "../imgs/wall-top-left",
-      "FileType": ".bmp",
-      "ImageCode": "t0l0"
-    },
-    {
-      "Path": "../imgs/wall-top-left-right",
-      "FileType": ".bmp",
-      "ImageCode": "t0lr"
-    },
-    {
-      "Path": "../imgs/wall-top-right",
-      "FileType": ".bmp",
-      "ImageCode": "t00r"
-    },
-    {
-      "Path": "../imgs/wall-bot",
-      "FileType": ".bmp",
-      "ImageCode": "0b00"
-    },
-    {
-      "Path": "../imgs/wall-bot-right",
-      "FileType": ".bmp",
-      "ImageCode": "0b0r"
-    },
-    {
-      "Path": "../imgs/wall-bot-left",
-      "FileType": ".bmp",
-      "ImageCode": "0bl0"
-    },
-    {
-      "Path": "../imgs/wall-bot-left-right",
-      "FileType": ".bmp",
-      "ImageCode": "0blr"
-    },
-    {
-      "Path": "../imgs/wall-left-right",
-      "FileType": ".bmp",
-      "ImageCode": "00lr"
-    },
-    {
-      "Path": "../imgs/wall-left",
-      "FileType": ".bmp",
-      "ImageCode": "00l0"
-    },
-    {
-      "Path": "../imgs/wall-right",
-      "FileType": ".bmp",
-      "ImageCode": "000r"
-    }
-  ],
+  "BallImage": {
+    "Path": "../imgs/ball.bmp",
+    "High": 9,
+    "Widht": 9
+  },
+  "PlatformImage": {
+    "Path": "../imgs/platform.bmp",
+    "High": 15,
+    "Widht": 75
+  },
+  "BrickImage": {
+    "Path": "../imgs/brick.bmp",
+    "High": 15,
+    "Widht": 40
+  },
+  "LeftWall": {
+    "Path": "../imgs/left_wall.bmp",
+    "High": 300,
+    "Widht": 30
+  },
+  "RightWall": {
+    "Path": "../imgs/right_wall.bmp",
+    "High": 300,
+    "Widht": 30
+  },
+  "TopWall": {
+    "Path": "../imgs/top_wall.bmp",
+    "High": 30,
+    "Widht": 340
+  },
   "FloorImage": {
     "Path": "../imgs/floor-0",
     "FileType": ".bmp"

@@ -44,10 +44,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bulat/git/lol/game
+CMAKE_SOURCE_DIR = /home/bulat/kurs/kurs2021/game
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bulat/git/lol/game
+CMAKE_BINARY_DIR = /home/bulat/kurs/kurs2021/game
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -74,14 +74,14 @@ clean: CMakeFiles/game.dir/clean
 CMakeFiles/game.dir/all:
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/depend
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bulat/git/lol/game/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target game"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bulat/kurs/kurs2021/game/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target game"
 .PHONY : CMakeFiles/game.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/game.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bulat/git/lol/game/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bulat/kurs/kurs2021/game/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/game.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bulat/git/lol/game/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bulat/kurs/kurs2021/game/CMakeFiles 0
 .PHONY : CMakeFiles/game.dir/rule
 
 # Convenience name for target.

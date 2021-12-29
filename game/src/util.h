@@ -13,14 +13,4 @@ public:
     int32_t y;
 };
 
-class Logger {
-public:
-    Logger();
-    void operator() (std::string clas, std::string func, std::string message);
-private:
-    static std::ofstream log;
-};
-
-
-
 #endif

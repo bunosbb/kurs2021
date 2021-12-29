@@ -1,3 +1,0 @@
-/home/bulat/git/lol/game/build/CMakeFiles/rebuild_cache.dir
-/home/bulat/git/lol/game/build/CMakeFiles/edit_cache.dir
-/home/bulat/git/lol/game/build/CMakeFiles/game.dir

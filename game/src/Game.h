@@ -17,75 +17,48 @@ class Unit;
 #include "Input.h"
 class Input;
 
-#include "Audio.h"
-class Audio;
-
 #include "Parser.h"
 class Object;
 
+#include "GameObject.hpp"
+class GameObject;
+
 #include "util.h"
 
-
-class Mob {
-public:
-    void Draw(Graphics* graphics);
-
-private:
-    int x;
-    int y;
-    Unit* skin;
+enum Direction {
+    kStay,
+    kToLeft,
+    kToRight
 };
 
 class Level {
 public:
     Level();
-    void Load_lvl(std::string path, Graphics* graphics);
+    ~Level();
 
-    std::vector<std::string> GetField();
-    std::vector<POINT> GetRocks();
-    size_t GetW();
-    size_t GetH();
-    size_t GetStartX();
-    size_t GetStartY();
-    size_t GetEndX();
-    size_t GetEndY();
-    size_t CharPosX();
-    size_t CharPosY();
+    void Load_lvl(std::string path, Object* input_config, Graphics* graphics);
 
-    void SetCharPos();
-    void SetCharPos(size_t x, size_t y);
-    void MoveRock(int k, int x, int y);
+    Graphics* GetGraphics() const;
 
-    void ChangeRockPos(std::vector<Object>& positions);
+    void Process(Direction dir);
 
-    void GetRockPos(std::vector<Object>& positions);
+    void DrawGame(Graphics* graphics) const;
 
-    std::string TryMove(int x, int y);
-
-
-    bool CheckWall(int x, int y);
-    std::string GetWallStr(int x, int y);
+    bool IsLose();
 
     bool IsWin();
 
 private:
-    std::vector<std::string> field;
-    std::vector<POINT> rocks;
-    size_t corn_x;
-    size_t corn_y;
-    size_t w;
-    size_t h;
-    size_t ch_x;
-    size_t ch_y;
-    size_t start_x;
-    size_t start_y;
-    size_t end_x;
-    size_t end_y;
+    std::vector<GameObject*> walls_;
+    std::vector<GameObject*> bricks_;
+    GameObject* ball_;
+    GameObject* platform_;
 };
 
 class Menu {
 public:
     Menu();
+    ~Menu();
 
     void AddNewLine(Unit* line, GameStates action);
 
@@ -103,27 +76,15 @@ private:
     std::vector<Unit*> lines;
     std::vector<GameStates> lines_action;
     SDL_Surface* surf;
-    Logger* log;
 };
 
 
 class Game {
 public:
-    Game(Object& input_config);
+    Game(Object* input_config);
+    ~Game();
 
     void DrawGame();
-    void DrawGameFloor();
-    void DrawGameWall();
-    void DrawGameRockExc(int k, int ch_y, int dir);
-    void DrawGameFloor(int alpha);
-    void DrawGameWall(int alpha);
-    void DrawGameWallAround(int x, int y);
-    void DrawGameWallAround(int x, int y, int alpha);
-    void DrawGameRockExc(int k, int ch_y, int dir, int alpha);
-
-    void CharMove(int x_ch, int y_ch);
-    void CharMoveRock(int x_ch, int y_ch);
-
 
     void DrawMenu(Menu* menu);
     void DrawScreen();
@@ -141,16 +102,11 @@ private:
     GameStates state;
 
     Graphics* graphics;
-    std::unordered_map<std::string, Audio*> auds;
-    Unit* main_ch;
-    Unit* wall;
-    Unit* start;
-    Unit* end;
-    Unit* floor;
-    Unit* rock;
     std::vector<Level*> lvls;
     size_t curr_lvl;
     size_t lvls_count;
+
+    size_t delay;
 
     Menu* main_menu;
     Menu* game_menu;
@@ -159,9 +115,7 @@ private:
     size_t screen_h;
 
     Input* input;
-    Object& config;
-
-    Logger* log;
+    Object* config;
 };
 
 #endif

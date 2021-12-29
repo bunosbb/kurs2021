@@ -8,6 +8,8 @@ class POINT;
 
 class Image {
 public:
+    ~Image();
+
     friend class Graphics;
 
     int GetW();

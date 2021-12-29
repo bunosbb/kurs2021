@@ -32,12 +32,12 @@ set (LIB_DIR
 
 set (ADDITIONAL_SRCS
 	util.cpp
-	#Audio.cpp
 	Game.cpp
 	Graphics.cpp
 	Image.cpp
 	Input.cpp
 	Parser.cpp
+	GameObject.cpp
 )
 
 foreach (source ${ADDITIONAL_SRCS})

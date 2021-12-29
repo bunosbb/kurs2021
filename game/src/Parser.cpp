@@ -10,7 +10,13 @@ bool Get_char(std::istream& in, char& ch) {
     return false;
 }
 
-Object::Object() : type(Null), log(new Logger) {}
+Object::Object() : type(Null) {}
+
+Object::~Object() {
+    for (auto [_, value] : dict_val) {
+        delete value;
+    }
+}
 
 Object::Object(int value) : type(Int), int_val(value) {}
 Object::Object(std::string value) : type(String), str_val(value) {}
@@ -124,11 +130,11 @@ bool Object::ReadVector(std::istream& in) {
         }
         vector_val.push_back(item);
         Get_char(in, in_ch);
-        if (in_ch == ']')
+        if (in_ch == ']') {
             return true;
+        }
         if (in_ch != ',') {
-            std::cerr << "cant read vector\n";
-            (*log)("Parser", "ReadVector", "ERROR, Can't read vector");
+            std::cout << "Parser::ReadVector ERROR, Can't read vector" << std::endl;
             return false;
         }
         Get_char(in, in_ch);
@@ -142,14 +148,14 @@ bool Object::ReadDict(std::istream& in) {
     Get_char(in, in_ch);
     while (in_ch != '}') {
         if (in_ch != '"') {
-            (*log)("Parser", "ReadDict", "ERROR, can't read dict. There is no key");
+            std::cout << "Parser::ReadDict ERROR, can't read dict. There is no key" << std::endl;
             return false;
         }
         Object name;
         name.ReadString(in);
         Get_char(in, in_ch);
         if (in_ch != ':') {
-            (*log)("Parser", "ReadDict", "ERROR, can't read dict. Wrong sytax with key " + name.AsString());
+            std::cout << "Parser::ReadDict ERROR, can't read dict. Wrong sytax with key " << name.AsString() << std::endl;
             return false;
         }
         Get_char(in, in_ch);
@@ -192,10 +198,11 @@ bool Object::ReadDict(std::istream& in) {
         }
         dict_val[name.AsString()] = item;
         Get_char(in, in_ch);
-        if (in_ch == '}')
+        if (in_ch == '}') {
             return true;
+        }
         if (in_ch != ',') {
-            (*log)("Parser", "ReadDict", "ERROR, can't read dict.");
+            std::cout << "Parser::ReadDict ERROR, can't read dict." << std::endl;
             return false;
         }
         Get_char(in, in_ch);
@@ -307,11 +314,11 @@ void Object::Print(std::string path) {
 
 Object& Object::Get(std::string name) {
     if (type != Dict) {
-        (*log)("Parser", "Read", "Not dict Object. Key: " + name);
+        std::cout << "Parser::Read Not dict Object. Key: " << name << std::endl;
         //throw std::exception();
     }
     if (dict_val.find(name) == dict_val.end()) {
-        (*log)("Parser", "Read", "No such key in the dict. Key: " + name);
+        std::cout << "Parser::Read, No such key in the dict. Key: " << name << std::endl;
         //throw std::exception();
     }
     return *dict_val[name];
@@ -319,15 +326,12 @@ Object& Object::Get(std::string name) {
 
 Object& Object::Get(int index) {
     if (type != Vector) {
-        (*log)("Parser", "Read", "Not vector Object. Index: " + std::to_string(index));
+        std::cout << "Parser::Read, Not vector Object. Index: " << std::to_string(index) << std::endl;
         //throw std::exception();
     }
     if (index >= vector_val.size()) {
-        (*log)("Parser", "Read", "No such index in vector. Index: " + std::to_string(index));
+        std::cout << "Parser::Read, No such index in vector. Index: " << std::to_string(index) << std::endl;
         //throw std::exception();
     }
     return vector_val[index];
-}
-
-Object::~Object() {
 }

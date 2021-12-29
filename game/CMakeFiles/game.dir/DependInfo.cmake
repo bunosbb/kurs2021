@@ -4,13 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/bulat/git/lol/game/main.cpp" "/home/bulat/git/lol/game/CMakeFiles/game.dir/main.cpp.o"
-  "/home/bulat/git/lol/game/src/Game.cpp" "/home/bulat/git/lol/game/CMakeFiles/game.dir/src/Game.cpp.o"
-  "/home/bulat/git/lol/game/src/Graphics.cpp" "/home/bulat/git/lol/game/CMakeFiles/game.dir/src/Graphics.cpp.o"
-  "/home/bulat/git/lol/game/src/Image.cpp" "/home/bulat/git/lol/game/CMakeFiles/game.dir/src/Image.cpp.o"
-  "/home/bulat/git/lol/game/src/Input.cpp" "/home/bulat/git/lol/game/CMakeFiles/game.dir/src/Input.cpp.o"
-  "/home/bulat/git/lol/game/src/Parser.cpp" "/home/bulat/git/lol/game/CMakeFiles/game.dir/src/Parser.cpp.o"
-  "/home/bulat/git/lol/game/src/util.cpp" "/home/bulat/git/lol/game/CMakeFiles/game.dir/src/util.cpp.o"
+  "/home/bulat/kurs/kurs2021/game/main.cpp" "/home/bulat/kurs/kurs2021/game/CMakeFiles/game.dir/main.cpp.o"
+  "/home/bulat/kurs/kurs2021/game/src/Game.cpp" "/home/bulat/kurs/kurs2021/game/CMakeFiles/game.dir/src/Game.cpp.o"
+  "/home/bulat/kurs/kurs2021/game/src/Graphics.cpp" "/home/bulat/kurs/kurs2021/game/CMakeFiles/game.dir/src/Graphics.cpp.o"
+  "/home/bulat/kurs/kurs2021/game/src/Image.cpp" "/home/bulat/kurs/kurs2021/game/CMakeFiles/game.dir/src/Image.cpp.o"
+  "/home/bulat/kurs/kurs2021/game/src/Input.cpp" "/home/bulat/kurs/kurs2021/game/CMakeFiles/game.dir/src/Input.cpp.o"
+  "/home/bulat/kurs/kurs2021/game/src/Parser.cpp" "/home/bulat/kurs/kurs2021/game/CMakeFiles/game.dir/src/Parser.cpp.o"
+  "/home/bulat/kurs/kurs2021/game/src/util.cpp" "/home/bulat/kurs/kurs2021/game/CMakeFiles/game.dir/src/util.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

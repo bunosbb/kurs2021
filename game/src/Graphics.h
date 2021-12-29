@@ -11,6 +11,8 @@ public:
     Unit();
     Unit(int new_x, int new_y);
 
+    ~Unit();
+
     void AddImage(Image* img);
     void AddImage(Image* img, std::string);
     Image* GetImage();

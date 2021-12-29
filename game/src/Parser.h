@@ -4,7 +4,6 @@
 #include "Project.h"
 
 #include "util.h"
-class Logger;
 
 enum ObjectType {
     Vector,
@@ -23,6 +22,7 @@ public:
     bool IsDict();
 
     Object();
+    ~Object();
 
     Object(int value);
     Object(std::string value);
@@ -56,14 +56,12 @@ public:
 
     Object& Get(std::string name);
     Object& Get(int index);
-    ~Object();
 
 private:
     ObjectType type;
     std::string str_val;
     std::vector<Object> vector_val;
     std::unordered_map<std::string, Object*> dict_val;
-    Logger* log;
     int int_val;
 };
 
