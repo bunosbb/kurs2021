@@ -1,3 +1,0 @@
-/home/bulat/kurs/kurs2021/game/CMakeFiles/rebuild_cache.dir
-/home/bulat/kurs/kurs2021/game/CMakeFiles/edit_cache.dir
-/home/bulat/kurs/kurs2021/game/CMakeFiles/game.dir
